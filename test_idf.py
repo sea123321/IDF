@@ -63,8 +63,8 @@ if __name__ == '__main__':
   print('{:d} roidb entries'.format(len(roidb)))
 
   # initilize the network here.
-  from model.faster_rcnn.vgg16_ours import vgg16
-  #from model.faster_rcnn.resnet_ours import resnet
+  from model.faster_rcnn.vgg16_idf import vgg16
+  #from model.faster_rcnn.resnet_idf import resnet
 
   if args.net == 'vgg16':
       fasterRCNN = vgg16(imdb.classes, pretrained=True, class_agnostic=args.class_agnostic)
