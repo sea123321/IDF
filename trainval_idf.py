@@ -25,7 +25,7 @@ from model.utils.net_utils import weights_normal_init, save_net, load_net, \
 
 from model.utils.parser_func import parse_args, set_dataset_args
 # initilize the network here.
-from model.faster_rcnn.vgg16_ours import vgg16
+from model.faster_rcnn.vgg16_idf import vgg16
 
 
 if __name__ == '__main__':
