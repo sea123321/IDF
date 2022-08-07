@@ -9,7 +9,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import math
 import torchvision.models as models
-from model.faster_rcnn.faster_rcnn_ours import _fasterRCNN
+from model.faster_rcnn.faster_rcnn_idf import _fasterRCNN
 
 from model.utils.config import cfg
 
