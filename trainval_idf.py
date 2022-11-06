@@ -322,19 +322,7 @@ if __name__ == '__main__':
             naloss_t_1 = 0.5 * F.cross_entropy(priv_1, domain_t_1_b)
             #########################################################################
             
-            
-            '''if args.dataset == 'sim':
-                loss += (dloss_s_3 + dloss_t_3 + dloss_s_1 + dloss_t_1 + dloss_s_2 + dloss_t_2 + dloss_s_ins * 0.5 + dloss_t_ins * 0.5  \
-                        + naloss_s_3 + naloss_s_2 + naloss_s_1 + naloss_t_3 + naloss_t_2 + naloss_t_1) * args.eta
-            else:
-                loss += (dloss_s_3 + dloss_t_3 + dloss_s_1 + dloss_t_1 + dloss_s_2 + dloss_t_2 + dloss_s_ins * 0.5 + dloss_t_ins * 0.5  \
-                        + naloss_s_3 + naloss_s_2 + naloss_s_1 + naloss_t_3 + naloss_t_2 + naloss_t_1)'''
-            '''if not isSeparation:
-                loss += (dloss_s_3 + dloss_t_3 + dloss_s_1 + dloss_t_1 + dloss_s_2 + dloss_t_2 + dloss_s_ins * 0.5 + dloss_t_ins * 0.5  \
-                        + naloss_s_3 + naloss_s_2 + naloss_s_1 + naloss_t_3 + naloss_t_2 + naloss_t_1)
-            else:
-                loss += (dloss_s_3 + dloss_t_3 + dloss_s_1 + dloss_t_1 + dloss_s_2 + dloss_t_2 + dloss_s_ins * 0.5 + dloss_t_ins * 0.5  \
-                        + naloss_s_3 + naloss_s_2 + naloss_s_1 + naloss_t_3 + naloss_t_2 + naloss_t_1 + loss_s_se * 0.5 +  loss_t_se * 0.5 )'''
+
             if isSeparation:
                 loss += (dloss_s_3 + dloss_t_3 + dloss_s_1 + dloss_t_1 + dloss_s_2 + dloss_t_2 + dloss_s_ins * 0.5 + dloss_t_ins * 0.5  \
                         + naloss_s_3 + naloss_s_2 + naloss_s_1 + naloss_t_3 + naloss_t_2 + naloss_t_1 + loss_s_se2 + loss_s_se3 + loss_t_se2 + loss_t_se3)    
