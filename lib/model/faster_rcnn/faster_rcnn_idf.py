@@ -79,13 +79,9 @@ class _fasterRCNN(nn.Module):
         
         dist2 = torch.mean(F.pairwise_distance((base_feat2 * att2_b), (base_feat2_b * att2_b), 2, keepdim=True))
         loss_se_2 = 0.001*dist2
-        '''if isSeparation:
-            loss_se_2 = 0.5 * max(0.0001, 1 - torch.sigmoid(dist2))
-        else:
-            loss_se_2 = 0.0001'''
+
         base_feat2 = base_feat2 * (1 + att2_b)
         base_feat2_b = base_feat2_b * (1 + att2)
-
 
 
         #5th block    
@@ -99,10 +95,7 @@ class _fasterRCNN(nn.Module):
         att3_b = dam(base_feat3_b.detach())
         dist3 = torch.mean(F.pairwise_distance((base_feat3 * att3_b), (base_feat3_b * att3_b), 2, keepdim=True))
         loss_se_3 = 0.001*dist3        
-        '''if isSeparation:
-            loss_se_3 = 0.5 * max(0.0001, 1 - torch.sigmoid(dist3))
-        else:
-            loss_se_3 = 0.0001'''
+
         base_feat3 = base_feat3 * (1 + att3_b)
         base_feat3_b = base_feat3_b * (1 + att3)      
  
